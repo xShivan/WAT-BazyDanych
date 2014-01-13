@@ -1,0 +1,16 @@
+use przychodnia_lekarska;
+source badanie.sql;
+source chor_pac_relation.sql;
+source chor_wiz_relation.sql;
+source choroba.sql;
+source gabinet.sql;
+source lek.sql;
+source lek_pac_relation.sql;
+source lek_spec_relation.sql;
+source lekarz.sql;
+source pacjent.sql;
+source recepta.sql;
+source recepta_lek_relation.sql;
+source specjalizacja.sql;
+source wizyta.sql;
+source klucze_obce.sql
