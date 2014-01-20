@@ -3,5 +3,6 @@ CREATE TABLE lekarz(
 	imie varchar(255),
 	nazwisko varchar(255),
 	adres_zamieszkania text,
-	data_urodzenia datetime
+	data_urodzenia datetime,
+	CONSTRAINT chc_birth_date CHECK (data_urodzenia < NOW())
 );

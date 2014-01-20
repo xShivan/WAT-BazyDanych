@@ -17,7 +17,7 @@ ALTER TABLE lek_pac_relation
 ALTER TABLE lek_spec_relation
 	add foreign key (id_specjalizacja) references specjalizacja(id_specjalizacja) on delete cascade;
 ALTER TABLE lek_spec_relation
-	add foreign key (id_lekarz) references lekarz(id_lekarz) on	delete cascade;
+	add foreign key (id_lekarz) references lekarz(id_lekarz) on delete cascade;
 ALTER TABLE recepta
 	add foreign key (id_pacjent) references pacjent(id_pacjent) on delete cascade;
 ALTER TABLE recepta
@@ -33,6 +33,6 @@ ALTER TABLE wizyta
 ALTER TABLE badanie
 	add foreign key (id_pacjent) references pacjent(id_pacjent) on delete cascade;
 ALTER TABLE badanie
-	add foreign key	(id_wizyta) references wizyta(id_wizyta) on delete cascade;
+	add foreign key (id_wizyta) references wizyta(id_wizyta) on delete cascade;
 ALTER TABLE specjalizacja
 	add foreign key (id_gabinet) references gabinet(id_gabinet) on delete cascade;
