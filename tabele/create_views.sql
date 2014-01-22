@@ -24,10 +24,22 @@ BEGIN
 	);
 	INSERT INTO widok_w_recepcie(wystawiajacy, pacjent, data_wystawienia, liczba_lekow)
 	VALUES (
-		(SELECT CONCAT(l.imie, ' ', l.nazwisko) FROM lekarz l WHERE id_lekarz = (SELECT id_lekarz FROM recepta WHERE id_recepta = in_id_recepta)),
-		(SELECT CONCAT(p.imie, ' ', p.nazwisko) FROM pacjent p WHERE id_pacjent = (SELECT id_pacjent FROM recepta WHERE id_recepta = in_id_recepta)),
-		(SELECT data_wystawienia FROM recepta WHERE id_recepta = in_id_recepta),
-		(SELECT COUNT(*) FROM recepta_lek_relation WHERE id_recepta = in_id_recepta)
+		(SELECT CONCAT(l.imie, ' ', l.nazwisko) 
+			FROM lekarz l
+			WHERE id_lekarz = (SELECT id_lekarz
+				FROM recepta
+				WHERE id_recepta = in_id_recepta)),
+		(SELECT CONCAT(p.imie, ' ', p.nazwisko)
+			FROM pacjent p
+			WHERE id_pacjent = (SELECT id_pacjent 
+				FROM recepta
+				WHERE id_recepta = in_id_recepta)),
+		(SELECT data_wystawienia
+			FROM recepta
+			WHERE id_recepta = in_id_recepta),
+		(SELECT COUNT(*)
+			FROM recepta_lek_relation
+			WHERE id_recepta = in_id_recepta)
 	);
 
 END
