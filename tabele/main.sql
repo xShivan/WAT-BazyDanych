@@ -15,6 +15,7 @@ source recepta.sql;
 source recepta_lek_relation.sql;
 source specjalizacja.sql;
 source wizyta.sql;
+source create_indexes.sql;
 source klucze_obce.sql
 source insert_choroba.sql;
 source insert_pacjent.sql;
