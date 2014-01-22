@@ -15,7 +15,7 @@ CREATE PROCEDURE informacje_o_recepcie(
 	IN in_id_recepta int
 )
 BEGIN
-	DROP TABLE IF EXISTS recepta_info;
+	DROP TABLE IF EXISTS widok_w_recepcie;
 	CREATE TABLE widok_w_recepcie(
 		wystawiajacy varchar(255),
 		pacjent varchar(255),
