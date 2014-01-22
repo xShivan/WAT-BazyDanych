@@ -1,10 +1,10 @@
 delimiter //
 
 CREATE FUNCTION f_srednia_zachorowalnosc ()
-  RETURNS INT
+  RETURNS FLOAT
     BEGIN
-     DECLARE avarage INT;
-     SET avarage = (SELECT AVG(liczba_chorob) FROM pacjenci);
+     DECLARE avarage FLOAT;
+     SET avarage = (SELECT AVG(liczba_chorob) FROM pacjent);
      RETURN avarage;
     END;
 

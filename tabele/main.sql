@@ -33,3 +33,4 @@ source insert_zdiagnozowana_choroba.sql;
 source create_views.sql;
 source create_triggers.sql;
 source func_srednia_chorob.sql;
+source insert_values.sql;
